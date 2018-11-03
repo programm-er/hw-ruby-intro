@@ -30,7 +30,13 @@ def max_2_sum arr
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  if !arr.any?
+    return false
+  elsif arr.length == 1
+    return false
+  else
+    
+  end
 end
 
 # Part 2
