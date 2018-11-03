@@ -3,7 +3,15 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  total = 0
+  if !arr.any?
+    return 0
+  else
+    arr.each do |var|
+      total = total + var
+    end
+    return total;
+  end
 end
 
 def max_2_sum arr
