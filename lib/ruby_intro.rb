@@ -10,8 +10,12 @@ def max_2_sum arr
   # YOUR CODE HERE
 end
 
-def sum_to_n? arr, n
-  # YOUR CODE HERE
+def sum_to_n? arry, suma
+   if arry.empty?
+    suma == 0
+  else
+    arry.permutation(2).any? { |elemento| elemento[0] + elemento[1] == suma }
+  end
 end
 
 # Part 2
