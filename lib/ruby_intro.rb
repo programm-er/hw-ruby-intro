@@ -35,7 +35,16 @@ def sum_to_n? arr, n
   elsif arr.length == 1
     return false
   else
-    
+    i = 0
+    while i < arr.length - 2
+      j = i + 1;
+      while j < arr.length - 1
+        total = arr[i] + arr[j]
+        if total == n
+          return true
+        end
+      end
+    end
   end
 end
 
