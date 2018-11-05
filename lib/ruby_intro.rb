@@ -15,15 +15,45 @@ def sum arr
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  total = 0
+  if !arr.any?
+    return 0
+  elsif arr.length == 1
+    return arr[0]
+  else
+    arr.sort!
+    primero = arr.pop
+    segundo = arr.pop
+    total = primero + segundo
+    return total
+  end
 end
 
 def sum_to_n? arr, n
+<<<<<<< HEAD
   if arry.empty?
    	suma == 0
   else
     arry.permutation(2).any? { |elemento| elemento[0] + elemento[1] == suma }
 end
+=======
+  if !arr.any?
+    return false
+  elsif arr.length == 1
+    return false
+  else
+    i = 0
+    while i < arr.length - 2
+      j = i + 1;
+      while j < arr.length - 1
+        total = arr[i] + arr[j]
+        if total == n
+          return true
+        end
+      end
+    end
+  end
+>>>>>>> JonathanOchoa
 end
 
 # Part 2
