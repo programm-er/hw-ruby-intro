@@ -16,7 +16,16 @@ def sum arr
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  re=0
+  if arr.empty?
+    return 0
+  elsif arr.length==1
+    return arr.pop
+  else
+    arr.sort!
+    re=arr.pop+arr.pop
+    return re
+  end
 end
 
 def sum_to_n? arr, n
