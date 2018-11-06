@@ -29,11 +29,8 @@ def max_2_sum arr
 end
 end
 
-def sum_to_n? arry, suma
-  if arry.empty?
-   	return false
-  else
-    arry.permutation(2).any? { |elemento| elemento[0] + elemento[1] == suma }
+def sum_to_n? arr, n
+  
 end
 end
 
