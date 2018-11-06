@@ -32,6 +32,7 @@ end
 def sum_to_n? arry, suma
   if arry.empty?
    	suma == 0
+    return false
   else
     arry.permutation(2).any? { |elemento| elemento[0] + elemento[1] == suma }
 end
