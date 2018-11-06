@@ -3,15 +3,45 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  if arr.empty?
+    return 0
+  else
+    arr.each do |bo|
+      sumar=sumar+bo;
+    end
+    return sumar
+  end
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  pri=0
+  if arr.empty?
+    return 0
+  elsif arr.length==1
+    return arr.pop
+  else
+    arr.sort!
+    pri=arr.pop+arr.pop
+    return pri
+  end
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  if arr.empty?
+    return false
+    elsif arr.length==1
+      return false
+  else
+    cont=Hash.new
+    arr.each do|valor|
+      if cont.key? valor
+        return true
+      else
+        cont[n-valor]=n
+      end
+    end
+  end
+  return false    
 end
 
 # Part 2
