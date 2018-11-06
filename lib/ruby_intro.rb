@@ -30,7 +30,11 @@ end
 end
 
 def sum_to_n? arr, n
-
+  if arry.empty?
+   	return false
+  else
+    arry.permutation(2).any? { |elemento| elemento[0] + elemento[1] == suma }
+end
 end
 
 # Part 2
