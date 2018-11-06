@@ -29,7 +29,7 @@ def max_2_sum arr
 end
 end
 
-def sum_to_n? arr, n
+def sum_to_n? arry, suma
   if arry.empty?
    	suma == 0
   else
