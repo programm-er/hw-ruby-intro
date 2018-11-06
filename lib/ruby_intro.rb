@@ -3,7 +3,16 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  suma=0
+  i=0
+  if arr.empty?
+    return 0
+  else
+    arr.each do |i|
+      suma=suma+i;
+    end
+    return suma
+  end
 end
 
 def max_2_sum arr
