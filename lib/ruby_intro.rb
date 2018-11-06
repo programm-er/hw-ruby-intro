@@ -55,5 +55,13 @@ end
 # Part 3
 
 class BookInStock
-# YOUR CODE HERE
+  def constructor isbn, id
+    if isbn == ""
+      return ArgumentErrors
+    else
+      if id <= 0
+        return ArgumentError
+      end
+    end
+  end
 end
