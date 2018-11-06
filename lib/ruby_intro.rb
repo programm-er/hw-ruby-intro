@@ -29,19 +29,14 @@ def max_2_sum arr
 end
 end
 
-<<<<<<< HEAD
 def sum_to_n? arry, suma
   if arry.empty?
-   	return false
+   	suma == 0
+    return false
   else
     arry.permutation(2).any? { |elemento| elemento[0] + elemento[1] == suma }
-  end
-=======
-def sum_to_n? arr, n
-  
->>>>>>> a0a03279457b080c141954bdf37da6d02e2f359b
 end
-
+end
 
 # Part 2
 
@@ -60,5 +55,13 @@ end
 # Part 3
 
 class BookInStock
-# YOUR CODE HERE
+  def constructor isbn, id
+    if isbn == ""
+      return ArgumentErrors
+    else
+      if id <= 0
+        return ArgumentError
+      end
+    end
+  end
 end
