@@ -29,7 +29,21 @@ def max_2_sum arr
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  if arr.empty?
+    return false
+    elsif arr.length==1
+      return false
+  else
+    cont=Hash.new
+    arr.each do|valor|
+      if cont.key? valor
+        return true
+      else
+        cont[n-valor]=n
+      end
+    end
+  end
+  return false    
 end
 
 # Part 2
