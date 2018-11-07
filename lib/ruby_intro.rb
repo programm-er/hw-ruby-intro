@@ -49,7 +49,29 @@ def starts_with_consonant? s
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  a = 1
+  if s == ""
+    return false
+  else
+    "a".upto("z") do |x|
+      if s.include? x
+        a = 0;
+      end
+    end
+    if a == 0
+      return false
+    else
+      n = s.split(' ')
+      n.each do |j|
+        k = j.to_i
+        if (k%4) == 0
+          return true
+        else
+          return false
+        end
+      end
+    end
+  end
 end
 
 # Part 3
