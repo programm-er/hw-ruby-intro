@@ -3,11 +3,30 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  total = 0
+  if !arr.any?
+    return 0
+  else
+    arr.each do |var|
+      total = total + var
+    end
+    return total;
+  end
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  total = 0
+  if !arr.any?
+    return 0
+  elsif arr.length == 1
+    return arr[0]
+  else
+    arr.sort!
+    primero = arr.pop
+    segundo = arr.pop
+    total = primero + segundo
+    return total
+end
 end
 
 def sum_to_n? arry, suma
