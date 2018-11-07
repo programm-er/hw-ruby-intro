@@ -7,35 +7,66 @@ def sum arr
 end
 
 def max_2_sum arr
-	# YOUR CODE HERE
+  # YOUR CODE HERE
 end
 
 def sum_to_n? arry, suma
-  
+  if arry.empty?
+   	suma == 0
+    return false
+  else
+    arry.permutation(2).any? { |elemento| elemento[0] + elemento[1] == suma }
+  end
 end
 
 # Part 2
 
 def hello(name)
-  cadena = "Hello, #{name}"
-  return cadena
+  # YOUR CODE HERE
 end
 
-=begin
-La exprecion regular busca los caracteres que son consonantes al principio de la linea
-y que la busqueda siempre coincida respecto a la consonante v 
-=end
-
 def starts_with_consonant? s
-  /^[b-df-hj-np-tv-z]/i.match(s) != nil
+  # YOUR CODE HERE
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  a = 1
+  if s == ""
+    return false
+  else
+    "a".upto("z") do |x|
+      if s.include? x
+        a = 0;
+      end
+    end
+    if a == 0
+      return false
+    else
+      n = s.split(' ')
+      n.each do |j|
+        k = j.to_i
+        if (k%4) == 0
+          return true
+        else
+          return false
+        end
+      end
+    end
+  end
 end
 
 # Part 3
 
 class BookInStock
-# YOUR CODE HERE
+  def constructor isbn, id
+    if isbn == ""
+      return ArgumentErrors
+    else
+      if id <= 0
+        return ArgumentError
+      end
+    end
+  end
+
+  attr_accessor :isbn, :id
 end
