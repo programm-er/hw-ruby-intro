@@ -86,4 +86,6 @@ class BookInStock
       end
     end
   end
+
+  attr_accessor :isbn, :id
 end
